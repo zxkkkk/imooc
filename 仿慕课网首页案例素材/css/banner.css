@@ -1,17 +1,18 @@
-/* banner 整体布局开始 */
+/* banner 总体布局开始 */
 #banner {
-  /* 把banner-box挤到中间 */
+  /* 把 banner-box 挤到中间 */
   padding: 32px 0;
+  /* background-color: #ccc; */
 }
 
 .banner-box {
   height: 482px;
-  background-color: rgb(134, 181, 198);
+  /* background-color: rgb(134, 181, 198); */
 }
 
 .g-banner {
   height: 382px;
-  background-color: rgb(134, 181, 198, .5);
+  /* background-color: rgb(226, 192, 192); */
 }
 
 .course-list {
@@ -25,16 +26,106 @@
 .swiper {
   width: 896px;
   height: 382px;
+  background-color: rgb(226, 192, 192);
   border-radius: 0 8px 0 0;
-  background-color: rgb(134, 181, 198, .5);
+  position: relative;
 }
 
 .sys-class {
   height: 100px;
-  background-color: rgb(134, 181, 198, .3);
+  background-color: rgb(200, 228, 239);
   border-radius: 0 0 8px 8px;
-
+  box-shadow: 0 5px 20px 0;
 }
 
-
 /* banner 整体布局结束 */
+
+/* 课程分类列表开始 */
+.course-list ul {
+  margin-top: 20px;
+}
+
+.course-list li {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.course-list li:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.course-list .title {
+  font-size: 14px;
+}
+
+.course-list .sub-title {
+  font-size: 12px;
+}
+
+.course-list .iconfont {
+  float: right;
+  color: rgba(255, 255, 255, .5);
+}
+
+/* 课程分类列表结束 */
+
+/* 轮播图 */
+.swiper a {
+  display: block;
+  width: 896px;
+  height: 382px;
+  background-image: url(../images/swiper/swiper-1.jpg);
+  background-size: 896px;
+  border-radius: 0 8px 0 0;
+  transition: 1s;
+}
+
+/* 左右切换按钮 */
+.swiper .arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(28, 31, 33, .2) url(../images/icon-left-small.png) no-repeat center/16px auto;
+  color: #fff;
+  transition: .5s;
+}
+
+.swiper .arrow:hover {
+  background-color: rgba(28, 31, 33, .5);
+  transition: .5s;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+/* 切换圆点 */
+.circle-list {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+}
+
+.circle-list li {
+  cursor: pointer;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .75);
+  transition: all .2s;
+}
+
+.circle-list .current {
+  width: 20px;
+}
